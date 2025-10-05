@@ -25,28 +25,28 @@ const Services = () => {
       description: 'Professional washing, drying, and expert folding for your everyday garments',
       image: washFoldImg,
       path: '/services/wash-and-fold',
-      price: 'From $1.99/lb'
+      // price: 'From $1.99/lb'
     },
     {
       title: 'Dry Cleaning',
       description: 'Expert care for delicate fabrics, formal wear, and special garments',
       image: dryCleaningImg,
       path: '/services/dry-cleaning',
-      price: 'From $8.99/item'
+      // price: 'From $8.99/item'
     },
     {
       title: 'Steam Pressing',
       description: 'Professional steam pressing for crisp, wrinkle-free clothes',
       image: steamPressingImg,
       path: '/services/steam-pressing',
-      price: 'From $4.99/item'
+      // price: 'From $4.99/item'
     },
     {
       title: 'Shoe Care',
       description: 'Professional cleaning, polishing, and restoration for all types of footwear',
       image: shoeCareImg,
       path: '/services/shoe-care',
-      price: 'From $15.99/pair'
+      // price: 'From $15.99/pair'
     }
   ];
 
@@ -140,9 +140,9 @@ const Services = () => {
                   <p className="text-lg mb-3 opacity-90 transform transition-all duration-500 group-hover:translate-y-[-8px]">
                     {service.description}
                   </p>
-                  <div className="text-xl font-semibold text-secondary-foreground transform transition-all duration-500 group-hover:translate-y-[-8px]">
+                  {/* <div className="text-xl font-semibold text-secondary-foreground transform transition-all duration-500 group-hover:translate-y-[-8px]">
                     {service.price}
-                  </div>
+                  </div> */}
                   <div className="absolute bottom-8 right-8 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:bg-white/30 group-hover:scale-110">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
