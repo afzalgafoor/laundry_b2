@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle2, Clock, Package, Truck } from 'lucide-react';
-import serviceImage from '@/assets/service-wash-fold.jpg';
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle2, Clock, Package, Truck } from "lucide-react";
+import serviceImage from "@/assets/service-wash-fold.jpg";
 
 const WashAndFold = () => {
   return (
@@ -10,17 +10,20 @@ const WashAndFold = () => {
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={serviceImage} 
-            alt="Wash & Fold Service" 
+          <img
+            src={serviceImage}
+            alt="Wash & Fold Service"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/80" />
         </div>
         <div className="container-custom relative z-10 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Wash & Fold Service</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Wash & Fold Service
+          </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Professional washing, drying, and expert folding for your everyday garments
+            Professional washing, drying, and expert folding for your everyday
+            garments
           </p>
           <Button size="lg" variant="secondary" asChild>
             <Link to="/contact">Book Service</Link>
@@ -36,17 +39,21 @@ const WashAndFold = () => {
               What's Included
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center">
-              Our Wash & Fold service takes care of everything from start to finish. 
-              Just hand us your laundry, and we'll return it fresh, clean, and perfectly folded.
+              Our Wash & Fold service takes care of everything from start to
+              finish. Just hand us your laundry, and we'll return it fresh,
+              clean, and perfectly folded.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-6 mt-12">
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Professional Washing</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Professional Washing
+                  </h3>
                   <p className="text-muted-foreground">
-                    High-quality detergents and proper sorting by color and fabric type
+                    High-quality detergents and proper sorting by color and
+                    fabric type
                   </p>
                 </CardContent>
               </Card>
@@ -71,7 +78,9 @@ const WashAndFold = () => {
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Fabric Softener</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Fabric Softener
+                  </h3>
                   <p className="text-muted-foreground">
                     Included for that fresh, soft feel on all garments
                   </p>
@@ -93,7 +102,9 @@ const WashAndFold = () => {
               <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Package className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">1. Bag Your Laundry</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                1. Bag Your Laundry
+              </h3>
               <p className="text-muted-foreground">
                 Place your dirty clothes in a bag and book your service
               </p>
@@ -137,11 +148,13 @@ const WashAndFold = () => {
               Ready to Get Started?
             </h2>
             <div className="bg-secondary/10 rounded-lg p-8 mb-8">
-              <div className="text-4xl font-bold text-secondary mb-2">$1.99/lb</div>
+              <div className="text-4xl font-bold text-secondary mb-2">
+                $1.99/lb
+              </div>
               <p className="text-muted-foreground">Minimum 10 lbs per order</p>
             </div>
             <p className="text-lg text-muted-foreground mb-8">
-              Book your service today and experience the convenience of 
+              Book your service today and experience the convenience of
               professional laundry service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

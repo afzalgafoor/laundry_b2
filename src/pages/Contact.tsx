@@ -1,31 +1,37 @@
-import { useState,useRef } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useToast } from '@/hooks/use-toast';
+import { useState, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   MessageCircle,
   Calendar,
-  Truck
-} from 'lucide-react';
-import contactHero from '@/assets/contact-hero.jpg';
+  Truck,
+} from "lucide-react";
+import contactHero from "@/assets/contact-hero.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
   });
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -55,9 +61,9 @@ const Contact = () => {
     emailjs
       .sendForm(
         "service_aben2fe",
-        "template_3zx7ahh", 
+        "template_3zx7ahh",
         formRef.current,
-        "5pUeH1pXR5Sd8EJ-6"    // Replace with your EmailJS Public Key
+        "5pUeH1pXR5Sd8EJ-6" // Replace with your EmailJS Public Key
       )
       .then(
         (result) => {
@@ -67,11 +73,11 @@ const Contact = () => {
             description: "We'll get back to you within 24 hours.",
           });
           setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: ''
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            message: "",
           });
         },
         (error) => {
@@ -85,44 +91,47 @@ const Contact = () => {
       );
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      details: '+971 4 55 36673',
-      action: 'tel:+97145536673'
+      title: "Phone",
+      details: "+971 4 55 36673",
+      action: "tel:+97145536673",
     },
     {
       icon: MessageCircle,
-      title: 'WhatsApp',
-      details: '+971 54 783 4850',
-      action: 'https://wa.me/+971547834850'
+      title: "WhatsApp",
+      details: "+971 54 783 4850",
+      action: "https://wa.me/+971547834850",
     },
     {
       icon: Mail,
-      title: 'Email',
-      details: 'info@bluebasketlaundry.com',
-      action: 'mailto:info@bluebasketlaundry.com'
+      title: "Email",
+      details: "info@bluebasketlaundry.com",
+      action: "mailto:info@bluebasketlaundry.com",
     },
     {
       icon: MapPin,
-      title: 'Address',
-      details: 'Shop 14, Rose 1 Building Al Karama, Dubai, UAE',
-      action: 'https://maps.google.com/?q=Shop 14, Rose 1 Building Al Karama, Dubai, UAE'
-    }
+      title: "Address",
+      details: "Shop 14, Rose 1 Building Al Karama, Dubai, UAE",
+      action:
+        "https://maps.google.com/?q=Shop 14, Rose 1 Building Al Karama, Dubai, UAE",
+    },
   ];
 
   const businessHours = [
-    { day: 'Monday - Friday', hours: '7:00 AM - 8:00 PM' },
-    { day: 'Saturday', hours: '8:00 AM - 6:00 PM' },
-    { day: 'Sunday', hours: '9:00 AM - 5:00 PM' }
+    { day: "Monday - Friday", hours: "7:00 AM - 8:00 PM" },
+    { day: "Saturday", hours: "8:00 AM - 6:00 PM" },
+    { day: "Sunday", hours: "9:00 AM - 5:00 PM" },
   ];
 
   return (
@@ -130,21 +139,19 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={contactHero} 
-            alt="Contact Blue Basket Laundry" 
+          <img
+            src={contactHero}
+            alt="Contact Blue Basket Laundry"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/75" />
         </div>
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contact Us
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl leading-relaxed">
-              Ready to dive into our services? Get in touch with us and experience
-              the convenience of professional laundry service.
+              Ready to dive into our services? Get in touch with us and
+              experience the convenience of professional laundry service.
             </p>
           </div>
         </div>
@@ -164,7 +171,11 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="name">Full Name *</Label>
@@ -206,15 +217,26 @@ const Contact = () => {
                       </div>
                       <div>
                         <Label htmlFor="service">Service Needed</Label>
-                        
-                        <Select value={formData.service} onValueChange={(value) => setFormData({...formData, service: value})}>
+
+                        <Select
+                          value={formData.service}
+                          onValueChange={(value) =>
+                            setFormData({ ...formData, service: value })
+                          }
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Select a service" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="wash-fold">Wash & Fold</SelectItem>
-                            <SelectItem value="dry-cleaning">Dry Cleaning</SelectItem>
-                            <SelectItem value="steam-pressing">Steam Pressing</SelectItem>
+                            <SelectItem value="wash-fold">
+                              Wash & Fold
+                            </SelectItem>
+                            <SelectItem value="dry-cleaning">
+                              Dry Cleaning
+                            </SelectItem>
+                            <SelectItem value="steam-pressing">
+                              Steam Pressing
+                            </SelectItem>
                             <SelectItem value="shoe-care">Shoe Care</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
@@ -284,12 +306,22 @@ const Contact = () => {
                           <info.icon className="w-5 h-5 text-secondary" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-primary">{info.title}</h3>
-                          <a 
+                          <h3 className="font-semibold text-primary">
+                            {info.title}
+                          </h3>
+                          <a
                             href={info.action}
                             className="text-muted-foreground hover:text-secondary transition-colors"
-                            target={info.action.startsWith('http') ? '_blank' : undefined}
-                            rel={info.action.startsWith('http') ? 'noopener noreferrer' : undefined}
+                            target={
+                              info.action.startsWith("http")
+                                ? "_blank"
+                                : undefined
+                            }
+                            rel={
+                              info.action.startsWith("http")
+                                ? "noopener noreferrer"
+                                : undefined
+                            }
                           >
                             {info.details}
                           </a>
@@ -300,7 +332,7 @@ const Contact = () => {
                 </Card>
 
                 {/* Business Hours */}
-                <Card>
+                {/* <Card>
                   <CardHeader>
                     <CardTitle className="text-xl text-primary flex items-center">
                       <Clock className="w-5 h-5 mr-2" />
@@ -322,7 +354,7 @@ const Contact = () => {
                       </p>
                     </div>
                   </CardContent>
-                </Card>
+                </Card> */}
 
                 {/* Quick Actions */}
                 <Card>
@@ -332,19 +364,34 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    <Button className="w-full justify-start" variant="outline" asChild>
+                    <Button
+                      className="w-full justify-start"
+                      variant="outline"
+                      asChild
+                    >
                       <a href="tel:+97145536673">
                         <Phone className="w-4 h-4 mr-2" />
                         Call Now
                       </a>
                     </Button>
-                    <Button className="w-full justify-start bg-green-500 hover:bg-green-600 text-white" asChild>
-                      <a href="https://wa.me/+971547834850" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      className="w-full justify-start bg-green-500 hover:bg-green-600 text-white"
+                      asChild
+                    >
+                      <a
+                        href="https://wa.me/+971547834850"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <MessageCircle className="w-4 h-4 mr-2" />
                         WhatsApp Chat
                       </a>
                     </Button>
-                    <Button className="w-full justify-start" variant="outline" asChild>
+                    <Button
+                      className="w-full justify-start"
+                      variant="outline"
+                      asChild
+                    >
                       <a href="mailto:info@bluebasketlaundry.com">
                         <Mail className="w-4 h-4 mr-2" />
                         Send Email
@@ -362,11 +409,10 @@ const Contact = () => {
       <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">
-              Find Us
-            </h2>
+            <h2 className="text-3xl font-bold text-primary mb-4">Find Us</h2>
             <p className="text-lg text-muted-foreground">
-              Visit our facility or schedule a pickup from anywhere in the service area
+              Visit our facility or schedule a pickup from anywhere in the
+              service area
             </p>
           </div>
 

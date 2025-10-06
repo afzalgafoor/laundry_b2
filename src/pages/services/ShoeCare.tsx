@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle2, Clock, Package, Truck } from 'lucide-react';
-import serviceImage from '@/assets/service-shoe-care.jpg';
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle2, Clock, Package, Truck } from "lucide-react";
+import serviceImage from "@/assets/service-shoe-care.jpg";
 
 const ShoeCare = () => {
   return (
@@ -10,17 +10,20 @@ const ShoeCare = () => {
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={serviceImage} 
-            alt="Shoe Care Service" 
+          <img
+            src={serviceImage}
+            alt="Shoe Care Service"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/80" />
         </div>
         <div className="container-custom relative z-10 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Shoe Care Service</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Shoe Care Service
+          </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Professional cleaning, polishing, and restoration for all types of footwear
+            Professional cleaning, polishing, and restoration for all types of
+            footwear
           </p>
           <Button size="lg" variant="secondary" asChild>
             <Link to="/contact">Book Service</Link>
@@ -36,10 +39,11 @@ const ShoeCare = () => {
               Expert Shoe Care
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center">
-              From leather dress shoes to suede boots and sneakers, our professional shoe care 
-              service restores and maintains your footwear to keep them looking their best.
+              From leather dress shoes to suede boots and sneakers, our
+              professional shoe care service restores and maintains your
+              footwear to keep them looking their best.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-6 mt-12">
               <Card>
                 <CardContent className="p-6">
@@ -53,7 +57,9 @@ const ShoeCare = () => {
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Leather Conditioning</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Leather Conditioning
+                  </h3>
                   <p className="text-muted-foreground">
                     Premium products to restore and protect leather
                   </p>
@@ -71,7 +77,9 @@ const ShoeCare = () => {
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Suede & Specialty</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Suede & Specialty
+                  </h3>
                   <p className="text-muted-foreground">
                     Expert care for suede, nubuck, and exotic materials
                   </p>
@@ -93,7 +101,9 @@ const ShoeCare = () => {
               <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Package className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">1. Schedule Service</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                1. Schedule Service
+              </h3>
               <p className="text-muted-foreground">
                 Book your shoe care service online
               </p>
@@ -111,7 +121,9 @@ const ShoeCare = () => {
               <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">3. Professional Care</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                3. Professional Care
+              </h3>
               <p className="text-muted-foreground">
                 Expert cleaning, conditioning, and polishing
               </p>
@@ -137,12 +149,16 @@ const ShoeCare = () => {
               Keep Your Shoes Looking New
             </h2>
             <div className="bg-secondary/10 rounded-lg p-8 mb-8">
-              <div className="text-4xl font-bold text-secondary mb-2">From $15.99/pair</div>
-              <p className="text-muted-foreground">Pricing varies by service type</p>
+              <div className="text-4xl font-bold text-secondary mb-2">
+                From $15.99/pair
+              </div>
+              <p className="text-muted-foreground">
+                Pricing varies by service type
+              </p>
             </div>
             <p className="text-lg text-muted-foreground mb-8">
-              Protect your investment with professional shoe care. 
-              Schedule your service today.
+              Protect your investment with professional shoe care. Schedule your
+              service today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>

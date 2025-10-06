@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle2, Clock, Package, Truck } from 'lucide-react';
-import serviceImage from '@/assets/service-steam-pressing.jpg';
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle2, Clock, Package, Truck } from "lucide-react";
+import serviceImage from "@/assets/service-steam-pressing.jpg";
 
 const SteamPressing = () => {
   return (
@@ -10,15 +10,17 @@ const SteamPressing = () => {
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={serviceImage} 
-            alt="Steam Pressing Service" 
+          <img
+            src={serviceImage}
+            alt="Steam Pressing Service"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/80" />
         </div>
         <div className="container-custom relative z-10 text-center text-white">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Steam Pressing Service</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Steam Pressing Service
+          </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Crisp, wrinkle-free clothes with professional steam pressing
           </p>
@@ -36,15 +38,18 @@ const SteamPressing = () => {
               Professional Pressing
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center">
-              Our steam pressing service delivers crisp, professional results for your 
-              dress shirts, pants, and formal wear using state-of-the-art equipment.
+              Our steam pressing service delivers crisp, professional results
+              for your dress shirts, pants, and formal wear using
+              state-of-the-art equipment.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-6 mt-12">
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Steam Technology</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Steam Technology
+                  </h3>
                   <p className="text-muted-foreground">
                     High-quality steam pressing for perfect results
                   </p>
@@ -62,7 +67,9 @@ const SteamPressing = () => {
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Expert Technique</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Expert Technique
+                  </h3>
                   <p className="text-muted-foreground">
                     Trained professionals for consistent quality
                   </p>
@@ -137,12 +144,16 @@ const SteamPressing = () => {
               Look Sharp Every Day
             </h2>
             <div className="bg-secondary/10 rounded-lg p-8 mb-8">
-              <div className="text-4xl font-bold text-secondary mb-2">From $3.99/item</div>
-              <p className="text-muted-foreground">Perfect for dress shirts and formal wear</p>
+              <div className="text-4xl font-bold text-secondary mb-2">
+                From $3.99/item
+              </div>
+              <p className="text-muted-foreground">
+                Perfect for dress shirts and formal wear
+              </p>
             </div>
             <p className="text-lg text-muted-foreground mb-8">
-              Get perfectly pressed clothes delivered to your door. 
-              Book your service today.
+              Get perfectly pressed clothes delivered to your door. Book your
+              service today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
