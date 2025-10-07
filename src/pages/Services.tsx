@@ -16,7 +16,7 @@ import servicesHero from "@/assets/services-hero.jpg";
 import washFoldImg from "@/assets/service-wash-fold.jpg";
 import dryCleaningImg from "@/assets/service-dry-cleaning.jpg";
 import steamPressingImg from "@/assets/service-steam-pressing.jpg";
-import shoeCareImg from "@/assets/service-shoe-care.jpg";
+import shoeCareImg from "@/assets/service-shoe-care.png";
 
 const Services = () => {
   const featuredServices = [

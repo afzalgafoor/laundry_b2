@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Clock, Package, Truck } from "lucide-react";
-import serviceImage from "@/assets/service-shoe-care.jpg";
+import serviceImage from "@/assets/service-shoe-care.png";
 
 const ShoeCare = () => {
   return (
@@ -134,7 +134,7 @@ const ShoeCare = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">4. Delivery</h3>
               <p className="text-muted-foreground">
-                Restored shoes delivered back like new
+                Cleaned shoes delivered back like new
               </p>
             </div>
           </div>

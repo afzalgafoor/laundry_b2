@@ -14,6 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
+        default: 'var(--font-default)',
         'poppins': ['Poppins', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
       },

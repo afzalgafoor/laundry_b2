@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-laundry.jpg";
 import washFoldImage from "@/assets/service-wash-fold.jpg";
 import dryCleaningImage from "@/assets/service-dry-cleaning.jpg";
 import steamPressingImage from "@/assets/service-steam-pressing.jpg";
-import shoeCareImage from "@/assets/service-shoe-care.jpg";
+import shoeCareImage from "@/assets/service-shoe-care.png";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -81,8 +81,10 @@ const Home = () => {
           <div className="absolute inset-0 bg-primary/70" />
         </div>
         <div className="container-custom relative z-10 text-center text-white fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Blue Basket Laundry
+          <h1 className="font-default text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            Premium Laundry &{' '}
+            {/* <span className="text-[#C53030]">Dry Cleaning</span> */}
+            <span className="text-secondary">Dry Cleaning</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8">Fresh Clothes, Fresh Start</p>
           <p className="text-lg mb-10 max-w-2xl mx-auto">
