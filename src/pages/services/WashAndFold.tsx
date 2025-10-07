@@ -103,7 +103,7 @@ const WashAndFold = () => {
                 <Package className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">
-                1. Bag Your Laundry
+                1. Schedule Service
               </h3>
               <p className="text-muted-foreground">
                 Place your dirty clothes in a bag and book your service
@@ -141,7 +141,7 @@ const WashAndFold = () => {
       </section>
 
       {/* Pricing & Contact */}
-      <section className="section-padding">
+      {/* <section className="section-padding bg-secondary">
         <div className="container-custom">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -161,10 +161,36 @@ const WashAndFold = () => {
               <Button size="lg" asChild>
                 <Link to="/contact">Book Your Service</Link>
               </Button>
-              {/* <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild>
                 <Link to="/pricing">View All Pricing</Link>
-              </Button> */}
+              </Button>
             </div>
+          </div>
+        </div>
+      </section> */}
+
+            {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-r from-secondary to-accent text-white">
+        <div className="container-custom text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Experience the Difference?
+          </h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            Join thousands of satisfied customers who trust Blue Basket Laundry
+            with their garment care needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-white text-secondary hover:bg-gray-100"
+              asChild
+            >
+              <Link to="/contact">Schedule Service</Link>
+            </Button>
+            {/* <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-secondary" asChild>
+              <Link to="/pricing">View Pricing</Link>
+            </Button> */}
           </div>
         </div>
       </section>

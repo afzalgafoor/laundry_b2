@@ -25,9 +25,8 @@ const WhoWeAreSection = () => {
           <p className="text-gray-600 leading-relaxed">
             At Blue Basket Laundry, we go beyond just laundry – we bring a
             complete care solution for your garments and home essentials. Based
-            in Dubai, we specialize in professional laundry, ironing, dry
-            cleaning, curtain cleaning, sofa cleaning, carpet cleaning, shoe
-            cleaning, and cloth alteration services.
+            in Dubai, we specialize in wash & fold, dry
+            cleaning, steam pressing and shoe care services.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-800">
