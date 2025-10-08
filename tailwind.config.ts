@@ -90,6 +90,11 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        "gradient-hero": "linear-gradient(135deg, hsl(210 100% 97%), hsl(199 66% 85%))",
+        "gradient-sky": "linear-gradient(135deg, hsl(199 66% 65%), hsl(213 84% 20%))",
+        "gradient-dark": "linear-gradient(135deg, hsl(213 84% 20%), hsl(199 66% 35%))",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -22,7 +22,7 @@ const ShoeCare = () => {
             Shoe Care Service
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Professional cleaning, polishing, and restoration for all types of
+            Professional cleaning and  polishing for all types of
             footwear
           </p>
           <Button size="lg" variant="secondary" asChild>
@@ -40,7 +40,7 @@ const ShoeCare = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center">
               From leather dress shoes to suede boots and sneakers, our
-              professional shoe care service restores and maintains your
+              professional shoe care service clean and maintains your
               footwear to keep them looking their best.
             </p>
 
@@ -61,7 +61,7 @@ const ShoeCare = () => {
                     Leather Conditioning
                   </h3>
                   <p className="text-muted-foreground">
-                    Premium products to restore and protect leather
+                    Premium products to maintain with excess care
                   </p>
                 </CardContent>
               </Card>
@@ -91,7 +91,7 @@ const ShoeCare = () => {
       </section>
 
       {/* Workflow Section */}
-      <section className="section-padding bg-muted">
+      <section className="bg-gradient-hero section-padding bg-muted">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             How It Works

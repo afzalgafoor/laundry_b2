@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { Badge } from "@/components/ui/badge";
 import {
   Shirt,
@@ -47,7 +48,7 @@ const Services = () => {
     {
       title: "Shoe Care",
       description:
-        "Professional cleaning, polishing, and restoration for all types of footwear",
+        "Professional cleaning and polishing for all types of footwear",
       image: shoeCareImg,
       path: "/services/shoe-care",
       // price: 'From $15.99/pair'
@@ -60,14 +61,14 @@ const Services = () => {
       title: "Pickup & Delivery",
       description:
         "Convenient pickup and delivery service right to your doorstep on your schedule.",
-      price: "Free with $25+ order",
+      // price: "Free worder",
     },
     {
       icon: Clock,
       title: "Express Service",
       description:
         "Rush service for urgent laundry needs with same-day or next-day turnaround.",
-      price: "+50% surcharge",
+      // price: "+50% surcharge",
     },
   ];
 
@@ -176,7 +177,7 @@ const Services = () => {
       </section>
 
       {/* Additional Services Section */}
-      <section className="section-padding bg-muted">
+      <section className="bg-gradient-hero section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -249,7 +250,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="section-padding">
+      <section className="bg-gradient-hero section-padding">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -300,8 +301,70 @@ const Services = () => {
           </div>
         </div>
       </section>
+      {/* Process Section */}
+{/* <section className="section-padding bg-white">
+  <div className="container-custom">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+        How It Works
+      </h2>
+      <p className="text-lg text-muted-foreground">
+        Simple, convenient, and reliable service in just a few easy steps
+      </p>
+    </div>
 
-      {/* CTA Section */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      {[
+        {
+          step: "1",
+          title: "Book Service",
+          description:
+            "Book online or call us to schedule a convenient pickup time.",
+        },
+        {
+          step: "2",
+          title: "We Collect",
+          description:
+            "Our team picks up your laundry from your specified location.",
+        },
+        {
+          step: "3",
+          title: "Professional Care",
+          description:
+            "We clean your items using premium detergents and expert care.",
+        },
+        {
+          step: "4",
+          title: "Delivery",
+          description:
+            "Fresh, clean clothes delivered back to you on time — every time.",
+        },
+      ].map((step, index) => (
+        <div
+          key={index}
+          className="relative group bg-gradient-to-br from-primary/90 to-primary text-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+        >
+
+          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white text-primary font-bold text-xl w-12 h-12 rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+            {step.step}
+          </div>
+
+          <div className="p-8 pt-12 text-center flex flex-col justify-between h-full">
+            <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
+            <p className="text-white/80 text-base leading-relaxed">
+              {step.description}
+            </p>
+          </div>
+
+
+          <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> */}
+
+
       <section className="section-padding bg-gradient-to-r from-secondary to-accent text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

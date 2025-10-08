@@ -36,7 +36,7 @@ const Home = () => {
     {
       title: "Shoe Care",
       description:
-        "Professional cleaning, polishing, and restoration for all footwear",
+        "Professional cleaning and polishing for all footwear",
       image: shoeCareImage,
       link: "/services/shoe-care",
     },
@@ -82,7 +82,7 @@ const Home = () => {
         </div>
         <div className="container-custom relative z-10 text-center text-white fade-in">
           <h1 className="font-default text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Premium Laundry &{' '}
+            Premium Laundry &{" "}
             {/* <span className="text-[#C53030]">Dry Cleaning</span> */}
             <span className="text-secondary">Dry Cleaning</span>
           </h1>
@@ -152,7 +152,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="section-padding bg-white">
+      <section className="bg-gradient-hero section-padding bg-white">
         <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -221,7 +221,7 @@ const Home = () => {
       </section> */}
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-secondary to-accent text-white">
+      <section className="bg-gradient-hero section-padding bg-gradient-to-r from-secondary to-accent ">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for Fresh, Clean Clothes?

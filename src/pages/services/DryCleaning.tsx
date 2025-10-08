@@ -94,7 +94,7 @@ const DryCleaning = () => {
       </section>
 
       {/* Workflow Section */}
-      <section className="section-padding bg-muted">
+      <section className="bg-gradient-hero section-padding bg-muted">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">
             How It Works

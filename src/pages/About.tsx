@@ -114,7 +114,7 @@ const About = () => {
       </section>
 
       {/* Mission & Values Section */}
-      <section className="section-padding bg-muted">
+      <section className="bg-gradient-hero section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -188,7 +188,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="section-padding bg-muted">
+      <section className="bg-gradient-hero section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
