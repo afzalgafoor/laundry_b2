@@ -220,7 +220,7 @@ const Home = () => {
       </section> */}
 
       {/* CTA Section */}
-      <section className="bg-gradient-hero section-padding bg-gradient-to-r from-secondary to-accent ">
+      <section className="bg-gradient-hero section-padding ">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for Fresh, Clean Clothes?
