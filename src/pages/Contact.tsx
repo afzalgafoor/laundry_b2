@@ -58,16 +58,47 @@ const Contact = () => {
     if (!formRef.current) return;
 
     // Send email using EmailJS
+    // emailjs
+    //   .sendForm(
+    //     "service_ejzrnst",
+    //     "template_zevzqwl",
+    //     formRef.current,
+    //     "W0X2LyvrFSFIqOIFUC4xQ"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log("Email sent:", result.text);
+    //       toast({
+    //         title: "Message Sent!",
+    //         description: "We'll get back to you within 24 hours.",
+    //       });
+    //       setFormData({
+    //         name: "",
+    //         email: "",
+    //         phone: "",
+    //         service: "",
+    //         message: "",
+    //       });
+    //     },
+    //     (error) => {
+    //       console.error("Email failed:", error.text);
+    //       toast({
+    //         title: "Error",
+    //         description: "Failed to send message. Please try again later.",
+    //         variant: "destructive",
+    //       });
+    //     }
+    //   );
     emailjs
       .sendForm(
-        "service_aben2fe",
-        "template_3zx7ahh",
+        "service_2uaq5zi",
+        "template_zevzqwl",
         formRef.current,
-        "5pUeH1pXR5Sd8EJ-6" // Replace with your EmailJS Public Key
+        "mciaY7dee9YclxBTn"
       )
       .then(
         (result) => {
-          console.log("Email sent:", result.text);
+          console.log("✅ Email sent successfully:", result);
           toast({
             title: "Message Sent!",
             description: "We'll get back to you within 24 hours.",
@@ -81,10 +112,10 @@ const Contact = () => {
           });
         },
         (error) => {
-          console.error("Email failed:", error.text);
+          console.error("❌ EmailJS Error:", error);
           toast({
             title: "Error",
-            description: "Failed to send message. Please try again later.",
+            description: `Failed to send message: ${error.text || error}`,
             variant: "destructive",
           });
         }
@@ -104,7 +135,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+971 4 55 36673",
+      details: "+971 4 553 6673",
       action: "tel:+97145536673",
     },
     {
@@ -417,24 +448,22 @@ const Contact = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-<Card>
-  <CardContent className="p-0">
-    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-      <iframe
-        src="https://www.google.com/maps?q=25.242641,55.298023&hl=en&z=15&output=embed"
-        width="100%"
-        height="100%"
-        style={{ border: 0 }}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Blue Basket Laundry Location"
-      ></iframe>
-    </div>
-  </CardContent>
-</Card>
-
-
+            <Card>
+              <CardContent className="p-0">
+                <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps?q=25.242641,55.298023&hl=en&z=15&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Blue Basket Laundry Location"
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
