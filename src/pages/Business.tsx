@@ -121,7 +121,7 @@ const Business = () => {
             />
             <div className="absolute bottom-6 right-6 bg-secondary text-white px-6 py-3 rounded-xl text-lg font-semibold flex flex-col sm:flex-row sm:items-center gap-2 shadow-lg tracking-wide">
               <span>Connect at : </span>
-              <span>📞 +971585341987</span>
+              <span>📞 +97145536673</span>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
           </div>

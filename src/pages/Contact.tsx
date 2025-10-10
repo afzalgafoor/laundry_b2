@@ -135,7 +135,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+971 4 553 6673",
+      details: "+97145536673",
       action: "tel:+97145536673",
     },
     {
@@ -243,7 +243,6 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           required
-                          placeholder="+971 4 553 6673"
                         />
                       </div>
                       <div>
