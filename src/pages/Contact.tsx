@@ -147,8 +147,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "info@bluebasketlaundry.com",
-      action: "mailto:info@bluebasketlaundry.com",
+      details: "bluebasketdxb@gmail.com",
+      action: "mailto:bluebasketdxb@gmail.com",
     },
     {
       icon: MapPin,
@@ -423,7 +423,7 @@ const Contact = () => {
                       variant="outline"
                       asChild
                     >
-                      <a href="mailto:info@bluebasketlaundry.com">
+                      <a href="mailto:bluebasketdxb@gmail.com">
                         <Mail className="w-4 h-4 mr-2" />
                         Send Email
                       </a>
