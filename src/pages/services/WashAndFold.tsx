@@ -140,36 +140,8 @@ const WashAndFold = () => {
         </div>
       </section>
 
-      {/* Pricing & Contact */}
-      {/* <section className="section-padding bg-secondary">
-        <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Ready to Get Started?
-            </h2>
-            <div className="bg-secondary/10 rounded-lg p-8 mb-8">
-              <div className="text-4xl font-bold text-secondary mb-2">
-                $1.99/lb
-              </div>
-              <p className="text-muted-foreground">Minimum 10 lbs per order</p>
-            </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              Book your service today and experience the convenience of
-              professional laundry service.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link to="/contact">Book Your Service</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/pricing">View All Pricing</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
-            {/* CTA Section */}
+      {/* CTA Section */}
       <section className="section-padding bg-gradient-to-r from-secondary to-accent text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -188,9 +160,6 @@ const WashAndFold = () => {
             >
               <Link to="/contact">Schedule Service</Link>
             </Button>
-            {/* <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-secondary" asChild>
-              <Link to="/pricing">View Pricing</Link>
-            </Button> */}
           </div>
         </div>
       </section>

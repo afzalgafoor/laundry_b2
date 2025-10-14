@@ -100,7 +100,9 @@ const SteamPressing = () => {
               <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <Package className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">1. Schedule Service</h3>
+              <h3 className="text-xl font-semibold mb-2">
+                1. Schedule Service
+              </h3>
               <p className="text-muted-foreground">
                 Schedule your pressing service online
               </p>
@@ -136,37 +138,6 @@ const SteamPressing = () => {
         </div>
       </section>
 
-      {/* Pricing & Contact */}
-      {/* <section className="section-padding">
-        <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Look Sharp Every Day
-            </h2>
-            <div className="bg-secondary/10 rounded-lg p-8 mb-8">
-              <div className="text-4xl font-bold text-secondary mb-2">
-                From $3.99/item
-              </div>
-              <p className="text-muted-foreground">
-                Perfect for dress shirts and formal wear
-              </p>
-            </div>
-            <p className="text-lg text-muted-foreground mb-8">
-              Get perfectly pressed clothes delivered to your door. Book your
-              service today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link to="/contact">Book Service</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/pricing">View All Pricing</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="section-padding bg-gradient-to-r from-secondary to-accent text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -185,9 +156,6 @@ const SteamPressing = () => {
             >
               <Link to="/contact">Schedule Service</Link>
             </Button>
-            {/* <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-secondary" asChild>
-              <Link to="/pricing">View Pricing</Link>
-            </Button> */}
           </div>
         </div>
       </section>

@@ -277,30 +277,6 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    {/* <div>
-                      <Label htmlFor="address">Pickup Address *</Label>
-                      <Input
-                        id="address"
-                        name="address"
-                        value={formData.address}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Full pickup address including apartment/unit number"
-                      />
-                    </div> */}
-
-                    {/* <div>
-                      <Label htmlFor="pickupDate">Preferred Pickup Date</Label>
-                      <Input
-                        id="pickupDate"
-                        name="pickupDate"
-                        type="date"
-                        value={formData.pickupDate}
-                        onChange={handleInputChange}
-                        min={new Date().toISOString().split('T')[0]}
-                      />
-                    </div> */}
-
                     <div>
                       <Label htmlFor="message">Additional Notes</Label>
                       <Textarea
@@ -363,31 +339,6 @@ const Contact = () => {
                     ))}
                   </CardContent>
                 </Card>
-
-                {/* Business Hours */}
-                {/* <Card>
-                  <CardHeader>
-                    <CardTitle className="text-xl text-primary flex items-center">
-                      <Clock className="w-5 h-5 mr-2" />
-                      Business Hours
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      {businessHours.map((schedule, index) => (
-                        <div key={index} className="flex justify-between items-center">
-                          <span className="font-medium text-primary">{schedule.day}</span>
-                          <span className="text-muted-foreground">{schedule.hours}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-4 p-3 bg-secondary/10 rounded-lg">
-                      <p className="text-sm text-secondary font-medium">
-                        Emergency pickup service available 24/7 with additional charges
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card> */}
 
                 {/* Quick Actions */}
                 <Card>

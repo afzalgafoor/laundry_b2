@@ -41,13 +41,12 @@ const Home = () => {
       link: "/services/shoe-care",
     },
     {
-    title: "Curtains & Carpet Cleaning",
-    description:
-      "Deep cleaning for curtains and carpets to refresh your home environment",
-    image: curtaincarpet, // reuse existing image
-    link: "/services/curtains-carpet",
-  },
-    
+      title: "Curtains & Carpet Cleaning",
+      description:
+        "Deep cleaning for curtains and carpets to refresh your home environment",
+      image: curtaincarpet, // reuse existing image
+      link: "/services/curtains-carpet",
+    },
   ];
 
   const testimonials = [
@@ -116,7 +115,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      {/* <section className="section-padding bg-muted">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -128,97 +127,47 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {services.map((service, index) => (
-              <Link
-                key={index}
-                to={service.link}
-                className="group relative overflow-hidden rounded-lg h-[400px] block"
-              >
-                <div className="absolute inset-0">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/70 transition-colors duration-300" />
-                </div>
-                <div className="relative h-full flex flex-col items-center justify-center text-center text-white p-8 transition-transform duration-300 group-hover:-translate-y-2">
-                  <h3 className="text-3xl font-bold mb-4 transition-all duration-300 group-hover:text-4xl">
-                    {service.title}
-                  </h3>
-                  <p className="text-lg opacity-90 transition-opacity duration-300 group-hover:opacity-100">
-                    {service.description}
-                  </p>
-                  <div className="mt-6 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Learn More →
+            {services.map((service, index) => {
+              const isLastOdd =
+                services.length % 2 !== 0 && index === services.length - 1;
+
+              return (
+                <Link
+                  key={index}
+                  to={service.link}
+                  className={`group relative overflow-hidden rounded-lg h-[400px] block ${
+                    isLastOdd ? "md:col-span-2 flex justify-center" : ""
+                  }`}
+                >
+                  <div className="absolute inset-0">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/70 transition-colors duration-300" />
                   </div>
-                </div>
-              </Link>
-            ))}
+                  <div
+                    className={`relative h-full flex flex-col items-center justify-center text-center text-white p-8 transition-transform duration-300 group-hover:-translate-y-2 ${
+                      isLastOdd ? "w-full max-w-[500px]" : ""
+                    }`}
+                  >
+                    <h3 className="text-3xl font-bold mb-4 transition-all duration-300 group-hover:text-4xl">
+                      {service.title}
+                    </h3>
+                    <p className="text-lg opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+                      {service.description}
+                    </p>
+                    <div className="mt-6 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      Learn More →
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
-      </section> */}
-      {/* Services Section */}
-{/* Services Section */}
-{/* Services Section */}
-<section className="section-padding bg-muted">
-  <div className="container-custom">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-        Our Services
-      </h2>
-      <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-        Comprehensive laundry solutions to meet all your needs
-      </p>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {services.map((service, index) => {
-        const isLastOdd =
-          services.length % 2 !== 0 && index === services.length - 1;
-
-        return (
-          <Link
-            key={index}
-            to={service.link}
-            className={`group relative overflow-hidden rounded-lg h-[400px] block ${
-              isLastOdd
-                ? "md:col-span-2 flex justify-center"
-                : ""
-            }`}
-          >
-            <div className="absolute inset-0">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/70 transition-colors duration-300" />
-            </div>
-            <div
-              className={`relative h-full flex flex-col items-center justify-center text-center text-white p-8 transition-transform duration-300 group-hover:-translate-y-2 ${
-                isLastOdd ? "w-full max-w-[500px]" : ""
-              }`}
-            >
-              <h3 className="text-3xl font-bold mb-4 transition-all duration-300 group-hover:text-4xl">
-                {service.title}
-              </h3>
-              <p className="text-lg opacity-90 transition-opacity duration-300 group-hover:opacity-100">
-                {service.description}
-              </p>
-              <div className="mt-6 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Learn More →
-              </div>
-            </div>
-          </Link>
-        );
-      })}
-    </div>
-  </div>
-</section>
-
-
-
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="bg-gradient-hero section-padding bg-white">
@@ -254,40 +203,6 @@ const Home = () => {
 
       {/* WHO WE ARE Section */}
       <WhoWeAreSection />
-
-      {/* Testimonials Section */}
-      {/* <section className="section-padding bg-muted">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Join thousands of satisfied customers who trust us with their laundry
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <p className="font-semibold text-primary">
-                    - {testimonial.name}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* CTA Section */}
       <section className="bg-gradient-hero section-padding ">

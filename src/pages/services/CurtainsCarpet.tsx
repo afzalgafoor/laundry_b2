@@ -38,8 +38,9 @@ const CurtainsCarpet = () => {
               Expert Curtains & Carpet Care
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center">
-              From delicate curtains to heavily used carpets, our professional cleaning
-              service ensures your home looks fresh, clean, and hygienic.
+              From delicate curtains to heavily used carpets, our professional
+              cleaning service ensures your home looks fresh, clean, and
+              hygienic.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mt-12">
@@ -64,7 +65,9 @@ const CurtainsCarpet = () => {
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Deodorizing & Freshening</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Deodorizing & Freshening
+                  </h3>
                   <p className="text-muted-foreground">
                     Eliminate odors and leave fabrics fresh and hygienic
                   </p>
@@ -73,7 +76,9 @@ const CurtainsCarpet = () => {
               <Card>
                 <CardContent className="p-6">
                   <CheckCircle2 className="w-12 h-12 text-secondary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Fabric Protection</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    Fabric Protection
+                  </h3>
                   <p className="text-muted-foreground">
                     Gentle care for delicate materials to maintain longevity
                   </p>
