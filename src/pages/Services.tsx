@@ -18,6 +18,7 @@ import washFoldImg from "@/assets/service-wash-fold.jpg";
 import dryCleaningImg from "@/assets/service-dry-cleaning.jpg";
 import steamPressingImg from "@/assets/service-steam-pressing.jpg";
 import shoeCareImg from "@/assets/service-shoe-care.png";
+import curtainImg from "@/assets/service-curtain.png";
 
 const Services = () => {
   const featuredServices = [
@@ -53,6 +54,15 @@ const Services = () => {
       path: "/services/shoe-care",
       // price: 'From $15.99/pair'
     },
+    {
+    title: "Curtains & Carpet Cleaning",
+    description:
+      "Deep cleaning for curtains and carpets" ,
+      // to refresh your home environment",
+    image: curtainImg, // reuse existing image
+    link: "/services/curtains-carpet",
+    // price: 'From $15.99/pair'
+  },
   ];
 
   const additionalServices = [
@@ -117,7 +127,7 @@ const Services = () => {
       </section>
 
       {/* Featured Services Section */}
-      <section className="section-padding">
+      {/* <section className="section-padding">
         <div className="container-custom">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -151,9 +161,6 @@ const Services = () => {
                   <p className="text-lg mb-3 opacity-90 transform transition-all duration-500 group-hover:translate-y-[-8px]">
                     {service.description}
                   </p>
-                  {/* <div className="text-xl font-semibold text-secondary-foreground transform transition-all duration-500 group-hover:translate-y-[-8px]">
-                    {service.price}
-                  </div> */}
                   <div className="absolute bottom-8 right-8 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:bg-white/30 group-hover:scale-110">
                     <svg
                       className="w-6 h-6"
@@ -174,7 +181,79 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <section className="section-padding">
+  <div className="container-custom">
+    <div className="text-center mb-16 animate-fade-in">
+      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+        Our Signature Services
+      </h2>
+      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        Click any service to learn more about our professional care
+        process
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {featuredServices.map((service, index) => {
+        const isLastOdd =
+          featuredServices.length % 2 !== 0 &&
+          index === featuredServices.length - 1;
+
+        return (
+          <Link
+            key={index}
+            to={service.path || service.link}
+            className={`group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 h-80 block ${
+              isLastOdd
+                ? "md:col-span-2 grid place-items-center"
+                : ""
+            }`}
+          >
+            <div className="absolute inset-0">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30 transition-opacity duration-500 group-hover:opacity-90" />
+            </div>
+            <div className="relative h-full flex flex-col justify-end p-8 text-white">
+              <h3 className="text-3xl font-bold mb-3 transform transition-transform duration-500 group-hover:translate-y-[-8px]">
+                {service.title}
+              </h3>
+              <p className="text-lg mb-3 opacity-90 transform transition-all duration-500 group-hover:translate-y-[-8px]">
+                {service.description}
+              </p>
+              {/* <div className="absolute bottom-8 right-8 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:bg-white/30 group-hover:scale-110"> */}
+               <div
+  className={`absolute bottom-8 ${
+    index === featuredServices.length - 1 ? "right-6 md:right-10" : "right-8"
+  } w-12 h-12 bg-white/20 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:bg-white/30 group-hover:scale-110`}
+> 
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </div>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
 
       {/* Additional Services Section */}
       <section className="bg-gradient-hero section-padding bg-muted">
@@ -204,9 +283,9 @@ const Services = () => {
                   <p className="text-muted-foreground mb-4">
                     {service.description}
                   </p>
-                  <div className="text-2xl font-bold text-secondary">
+                  {/* <div className="text-2xl font-bold text-secondary">
                     {service.price}
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             ))}

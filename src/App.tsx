@@ -18,6 +18,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Business from "./pages/Business";
+import CurtainsCarpet from "./pages/services/CurtainsCarpet";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/services/dry-cleaning" element={<DryCleaning />} />
           <Route path="/services/steam-pressing" element={<SteamPressing />} />
           <Route path="/services/shoe-care" element={<ShoeCare />} />
+          <Route path="/services/curtains-carpet" element={<CurtainsCarpet />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/business" element={<Business />} />
           <Route path="/contact" element={<Contact />} />

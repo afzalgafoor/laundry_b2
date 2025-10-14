@@ -9,6 +9,7 @@ import steamPressingImage from "@/assets/service-steam-pressing.jpg";
 import shoeCareImage from "@/assets/service-shoe-care.png";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
 import ScrollReveal from "@/components/ScrollReveal";
+import curtaincarpet from "@/assets/service-curtain.png";
 
 const Home = () => {
   const services = [
@@ -39,6 +40,14 @@ const Home = () => {
       image: shoeCareImage,
       link: "/services/shoe-care",
     },
+    {
+    title: "Curtains & Carpet Cleaning",
+    description:
+      "Deep cleaning for curtains and carpets to refresh your home environment",
+    image: curtaincarpet, // reuse existing image
+    link: "/services/curtains-carpet",
+  },
+    
   ];
 
   const testimonials = [
@@ -107,7 +116,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-muted">
+      {/* <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -148,7 +157,68 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* Services Section */}
+{/* Services Section */}
+{/* Services Section */}
+<section className="section-padding bg-muted">
+  <div className="container-custom">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+        Our Services
+      </h2>
+      <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Comprehensive laundry solutions to meet all your needs
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {services.map((service, index) => {
+        const isLastOdd =
+          services.length % 2 !== 0 && index === services.length - 1;
+
+        return (
+          <Link
+            key={index}
+            to={service.link}
+            className={`group relative overflow-hidden rounded-lg h-[400px] block ${
+              isLastOdd
+                ? "md:col-span-2 flex justify-center"
+                : ""
+            }`}
+          >
+            <div className="absolute inset-0">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/70 transition-colors duration-300" />
+            </div>
+            <div
+              className={`relative h-full flex flex-col items-center justify-center text-center text-white p-8 transition-transform duration-300 group-hover:-translate-y-2 ${
+                isLastOdd ? "w-full max-w-[500px]" : ""
+              }`}
+            >
+              <h3 className="text-3xl font-bold mb-4 transition-all duration-300 group-hover:text-4xl">
+                {service.title}
+              </h3>
+              <p className="text-lg opacity-90 transition-opacity duration-300 group-hover:opacity-100">
+                {service.description}
+              </p>
+              <div className="mt-6 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Learn More →
+              </div>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Why Choose Us Section */}
       <section className="bg-gradient-hero section-padding bg-white">

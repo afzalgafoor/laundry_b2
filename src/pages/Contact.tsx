@@ -268,6 +268,9 @@ const Contact = () => {
                               Steam Pressing
                             </SelectItem>
                             <SelectItem value="shoe-care">Shoe Care</SelectItem>
+                            <SelectItem value="curtains-carpet">
+                              Curtains & Carpet
+                            </SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
